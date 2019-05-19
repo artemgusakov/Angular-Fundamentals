@@ -1,5 +1,7 @@
 <div>
   <h1>Upcoming Angular Event</h1>
   <hr>
-  <events-thumbnail #thumbnail [event]="event" (confirmEvent)="confirmHandler($event)"></events-thumbnail>
+  <div *ngFor="let event of events">
+    <events-thumbnail #thumbnail [event]="event" (confirmEvent)="confirmHandler($event)"></events-thumbnail>
+  </div>
 </div>
